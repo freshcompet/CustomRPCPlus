@@ -1,0 +1,41 @@
+CustomRPCPlus
+
+Originally derived from CustomRPC in Equicord:
+https://github.com/Equicord/Equicord/tree/8d63e9694b2ef5195806b3f8b2e03135a4b4ea2c/src/plugins/customRPC
+
+Copyright (c) 2023 Vendicated and contributors.
+Original plugin credits retained: captain, AutumnVN, nin0dev, c0nnorgg.
+
+Modified on 2026-11-26:
+The first standalone Plus implementation was replaced with a small add-on for
+the original CustomRPC. It adds Default, PlayStation and Xbox selection to the
+original editor and changes only the platform on the original outgoing event.
+The original CustomRPC source, settings, sender, timers and presets are retained.
+Integration tests bundle the real original plugin with mocked Discord services.
+
+The preview now follows the selected platform while preserving the original
+preview content. Its original rendering is restored when the add-on is disabled.
+The CustomRPCPlus plugin author metadata lists only Discord account
+801514233010847784. Upstream attribution remains in this notice and source headers.
+
+Optional native game profile linking was added to the editor and preview.
+It changes the outgoing game application ID and preserves custom artwork paths
+while omitting conflicting image click URLs. The user's requested initial target
+is the GTA VI game page, application ID 1445160676522856458.
+Configured artwork is retained. When the large image is empty, the linked game's
+Discord application icon is used when available, in both the sender and preview.
+
+Status display type selection was added to the editor, sender and preview.
+Original presets now include the Plus platform, game profile and status display
+settings as namespaced serialized metadata. Older presets remain usable.
+
+Vencord and Equicord compatibility was added. The add-on now owns a Complete
+Presets editor and storage format, with migration from earlier preset records.
+Stock Vencord receives the repeating custom timestamp behavior from the add-on;
+the user's Equicord build retains its native timer. Client source files are kept
+unchanged. Upstream Vencord source was inspected at revision
+d086992fb674299a2fa05ac6432edc3a777389f3.
+
+This is a modified version, not an official Equicord or Vencord release.
+Distributed under the GNU General Public License, version 3 or any later version.
+The complete license text is included in LICENSE.
